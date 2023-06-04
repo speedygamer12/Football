@@ -13,7 +13,7 @@ const Fixtures = () => {
         setSearchParams({tab: navTab});
         setTab(navTab)
         const tabElement = document.querySelector(`.tab${index}`);
-        tabElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        tabElement.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     }
   return (
     <div className='bg-[#FDFDFD] p-5 md:px-10 w-full' >
@@ -22,7 +22,7 @@ const Fixtures = () => {
             <img src={Tip} alt="Tip" height={21} width={16} />
             <p className='text-[#000A0F] text-[14px] leading-[21px] md:text-[18px] md:leading-[27px] pl-3 py-1' >Pro tip: Click on any fixture to read the preview.</p>
         </div>
-        <NavTab tab={tab} setTab={handleNavTab} tabHeaders={tabHeaders} />
+        <NavTab className={'tab'} tab={tab} setTab={handleNavTab} tabHeaders={tabHeaders} />
         <GameFixtures />
     </div>
   )
