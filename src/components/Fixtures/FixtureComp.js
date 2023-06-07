@@ -4,7 +4,7 @@ import City from "../../assets/City.svg";
 
 const FixtureComp = () => {
   return (
-    <div className='border-b border-[#CFD5D8] py-3 flex h-[104px] md:h-[64px] justify-between md:justify-center' >
+    <div className='border-b border-[#CFD5D8] py-3 flex h-[104px] md:h-[64px] justify-between md:justify-center hover:bg-[#F1F3F4]' >
         <div className='flex md:flex-row flex-col md:items-center justify-between md:justify-normal md:mx-auto' >
             <p className='text-[16px] text-[[#000A0F]] leading-[24px] flex items-center' ><span className='md:order-none order-last' >Arsenal</span> <img src={Arsenal} alt="Gunners" className='w-[32px] h-[32px]' /> </p>
             <p className='w-[12px] h-[2px] bg-[#000A0F] md:block hidden md:mx-3' ></p>

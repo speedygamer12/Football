@@ -1,10 +1,12 @@
-import React from 'react'
-import NavBar from '../../components/NavBar/NavBar'
+import React from 'react';
+import GeneralLayout from '../../layouts/GeneralLayout'
 
 const Article = () => {
   return (
     <div>
-        <NavBar />
+        <GeneralLayout >
+          
+        </GeneralLayout>
     </div>
   )
 }

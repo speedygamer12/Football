@@ -7,7 +7,7 @@ const NavTab = ({tabHeaders, setTab, tab, className}) => {
             {
                 tabHeaders?.map((header, index) =>(
                     <li onClick={() => setTab(header, index)} key={header} className={`${className}${index} mr-3 md:mr-8`} >
-                        <span className={` inline-block pb-2 text-[#000A0F] whitespace-nowrap text-[14px] leading-[21px] md:text-[18px] md:leading-[27px] cursor-pointer ${tab === header ? 'text-[#003049] border-[#003049]  border-b-[2px]' : 'border-none'}`} >{header}</span>
+                        <span className={` inline-block pb-2 text-[#000A0F] whitespace-nowrap text-[14px] leading-[21px] md:text-[18px] md:leading-[27px] cursor-pointer ${tab === header ? 'text-[#003049] border-[#003049]  border-b-[2px] font-semibold' : 'border-none'}`} >{header}</span>
                     </li>
                 ))
             }
