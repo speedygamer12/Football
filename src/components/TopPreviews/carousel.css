@@ -1,0 +1,9 @@
+.slide.selected{
+    z-index: 0 !important;
+}
+
+.slide {
+    transition-duration: 500ms !important;
+    z-index: 0 !important;
+    opacity: 0.6;
+}
