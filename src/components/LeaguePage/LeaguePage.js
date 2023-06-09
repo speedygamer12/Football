@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import NavTab from '../NavTab/NavTab';
+import LeagueBody from './LeagueBody';
 import LeagueHeader from './LeagueHeader';
 
 const LeaguePage = () => {
@@ -18,6 +19,7 @@ const LeaguePage = () => {
     <div className='bg-[#FDFDFD] p-5 md:px-10 w-full' >
         <LeagueHeader />
         <NavTab className={'leaguepagetab'} tab={tab} setTab={handleNavTab} tabHeaders={tabHeaders} />
+        <LeagueBody />
     </div>
   )
 }

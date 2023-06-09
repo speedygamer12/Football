@@ -11,7 +11,7 @@ const Subscribe = () => {
                 <div className='w-full md:w-[400px]' >
                     <input value={email} onChange={(e)=> setEmail(e.target.value)} placeholder='Enter your email' className='text-[#003049] placeholder:text-[#A6AFB4] placeholder:text-[16px] placeholder:leading-[24px] w-full md:h-[56px] h-[48px] outline-none rounded-[4px] p-4' />
                 </div>
-                <button className='mt-2 md:mt-0 md:ml-3 text-white bg-[#F77F00] font-semibold text-[16px] leading-[24px] rounded-[4px] md:h-[56px] w-[170px] h-[48px]' >Subscribe for free</button>
+                <button className='mt-2 md:mt-0 md:ml-3 text-white bg-[#F77F00] font-semibold text-[16px] leading-[24px] rounded-[4px] md:h-[56px] w-[170px] h-[48px] hover:text-[#F77F00] hover:border hover:border-[#F77F00] hover:bg-transparent' >Subscribe for free</button>
             </div>
         </div>
     </div>

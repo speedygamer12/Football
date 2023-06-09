@@ -19,11 +19,11 @@ const NavBar = () => {
             </div>
             <div className='md:mx-auto hidden md:block' >
                 <ul className="flex md:flex-row flex-col list-none">
-                    {navTabs?.map(item => <li className='text-[18px] text-[#000A0F] font-medium leading-[27px] md:ml-[24px]' key={item} ><Link to="/league" >{item}</Link></li>)}
+                    {navTabs?.map(item => <li className='text-[18px] text-[#000A0F] font-medium leading-[27px] md:ml-[24px] hover:text-[#1D5775]' key={item} ><Link to="/league" >{item}</Link></li>)}
                 </ul>
             </div>
             <div className='ml-auto hidden md:block' >
-                <button className='text-white bg-[#F77F00] font-semibold text-[16px] leading-[24px] rounded-[4px] h-[52px] w-[170px]' >Subscribe for free</button>
+                <button className='text-white bg-[#F77F00] hover:text-[#F77F00] hover:border hover:border-[#F77F00] hover:bg-transparent font-semibold text-[16px] leading-[24px] rounded-[4px] h-[52px] w-[170px]' >Subscribe for free</button>
             </div>
             <div className='mr-3 md:hidden block' >
                 <img onClick={()=> setOpenNav(true)} className='w-[18px] h-[16px]' src={Vector} alt="Comapny logo" />
