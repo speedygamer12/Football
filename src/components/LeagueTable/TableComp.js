@@ -6,7 +6,7 @@ const TableComp = ({headers, children}) => {
         <table className='w-full border-collapse border-none' >
             <thead className='bg-[#CFD5D8] border-none h-[37px] md:h-[48px]' >
                 <tr className='border-none' >
-                    {headers?.map(header => <th key={header} className="border-none py-3 px-2.5 whitespace-nowrap text-[14px] leading-[21px] md:text-[16px] md:leading-[24px] font-semibold text-center">
+                    {headers?.map(header => <th key={header} className={`border-none py-3 px-2.5 whitespace-nowrap text-[14px] leading-[21px] md:text-[16px] md:leading-[24px] font-semibold ${header === "Team" ? "text-left" : "text-center"}`}>
                         {header}
                     </th>)}
                 </tr>
