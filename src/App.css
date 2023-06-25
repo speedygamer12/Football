@@ -6,3 +6,12 @@ body {
 h1 {
   font-family: 'Bitter', serif !important;
 }
+
+.tox-statusbar{
+  display: none !important;
+}
+
+.html-container p{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}

@@ -7,3 +7,7 @@
     z-index: 0 !important;
     opacity: 0.6;
 }
+
+.carousel img {
+    pointer-events:inherit !important;
+}

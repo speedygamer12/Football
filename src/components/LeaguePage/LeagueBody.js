@@ -1,34 +1,28 @@
 import React from 'react'
 import MiniCard from '../TopPreviews/MiniCard'
 
-const LeagueBody = () => {
+const LeagueBody = ({ allLeaguePreviews }) => {
   return (
     <div className='md:py-10 py-5 w-full' >
         <div className='flex w-full flex-col md:flex-row' >
-            <div className='md:w-2/3 w-full py-3 md:py-0' >
-                <MiniCard cardHeight={320} imageHeight={208} textHeight={112} />
-            </div>
-            <div className='md:w-1/3 w-full md:ml-5' >
-                <MiniCard cardHeight={320} imageHeight={208} textHeight={112} />
-            </div>
+            {allLeaguePreviews?.slice(0,2)?.map((previews, index)=> <div className={`${allLeaguePreviews?.slice(0,2)?.length < 2 ? "w-full" : index === 0 ? "md:w-2/3 md:mr-2" : "md:w-1/3 md:ml-2"} w-full py-3 md:py-0`} >
+                <MiniCard data={previews} league cardHeight={320} imageHeight={208} textHeight={112} />
+            </div>)}
         </div>
         <div className='flex w-full flex-col md:flex-row md:my-7' >
-            <div className='md:w-1/3 w-full py-3 md:py-0' >
-                <MiniCard cardHeight={320} imageHeight={208} textHeight={112} />
-            </div>
-            <div className='md:w-2/3 w-full md:ml-5' >
-                <MiniCard cardHeight={320} imageHeight={208} textHeight={112} />
-            </div>
+            {allLeaguePreviews?.slice(2,4)?.map((previews, index)=> <div className={`${allLeaguePreviews?.slice(2,4)?.length < 2 ? "w-full" : index === 0 ? "md:w-1/3 md:mr-2" : "md:w-2/3 md:ml-2"} w-full py-3 md:py-0`} >
+                <MiniCard data={previews} league cardHeight={320} imageHeight={208} textHeight={112} />
+            </div>)}
         </div>
         <div className='flex w-full flex-col md:flex-row' >
             <div className='md:w-1/3 w-full py-3 md:py-0' >
-                <MiniCard cardHeight={320} imageHeight={208} textHeight={112} />
+                <MiniCard league cardHeight={320} imageHeight={208} textHeight={112} />
             </div>
             <div className='md:w-1/3 w-full md:ml-5' >
-                <MiniCard cardHeight={320} imageHeight={208} textHeight={112} />
+                <MiniCard league cardHeight={320} imageHeight={208} textHeight={112} />
             </div>
-            <div className='md:w-1/3 w-full pt-3 md:pt-3 md:ml-5' >
-                <MiniCard cardHeight={320} imageHeight={208} textHeight={112} />
+            <div className='md:w-1/3 w-full pt-3 md:pt-0 md:ml-5' >
+                <MiniCard league cardHeight={320} imageHeight={208} textHeight={112} />
             </div>
         </div>
         <div className='flex justify-center pt-5 md:pt-10' >

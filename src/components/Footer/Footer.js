@@ -3,8 +3,10 @@ import FooterLogo from "../../assets/FooterLogo.svg";
 import MobileFooterLogo from "../../assets/MobileFooterLogo.svg"
 import Mail from "../../assets/Mail.svg";
 import Twitter from "../../assets/Twitter.svg";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+    const navTabs = ["Premier League", "Championship ", "League One", "League Two",]
   return (
     <div className='bg-[#EAECED] p-5 md:p-10' >
         <div className='flex md:flex-row flex-col md:justify-between md:items-start' >
@@ -16,11 +18,8 @@ const Footer = () => {
                 <div className='flex' >
                     <div>
                         <h1 className='font-semibold text-[#000A0F] text-[16px] leading-[24px] pb-1' >Leagues</h1>
-                        <p className='text-[#4E575C] py-1 text-[16px] leading-[24px]' >Premier League</p>
-                        <p className='text-[#4E575C] py-1 text-[16px] leading-[24px]' >Championship</p>
-                        <p className='text-[#4E575C] py-1 text-[16px] leading-[24px]' >League One</p>
-                        <p className='text-[#4E575C] py-1 text-[16px] leading-[24px]' >League Two</p>
-                        <p className='text-[#4E575C] py-1 text-[16px] leading-[24px]' >HomeOutside</p>
+                        {navTabs?.map((nav, index)=> <Link key={index} to={`/league/${nav}`} ><p className='text-[#4E575C] py-1 text-[16px] leading-[24px]' >{nav}</p></Link>)}
+                        {/* <p className='text-[#4E575C] py-1 text-[16px] leading-[24px]' >HomeOutside</p> */}
                     </div>
                     <div className='pl-7 md:pl-12' >
                         <h1 className='font-semibold text-[#000A0F] text-[16px] leading-[24px] pb-1' >Terms</h1>

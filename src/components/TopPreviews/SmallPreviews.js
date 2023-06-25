@@ -2,13 +2,10 @@ import React from 'react';
 // import CarouselImage from "../../assets/Ball.svg"
 import MiniCard from './MiniCard';
 
-const SmallPreviews = () => {
+const SmallPreviews = ({data, isSuccess}) => {
   return (
-    <div className='md:py-5 md:pl-8 md:h-[580px] flex flex-col w-full md:w-1/3' >
-        <MiniCard cardHeight={274} maxCardWidth textHeight={89} imageHeight={185} />
-        <div className='md:pt-[32px] w-full pt-5' >
-            <MiniCard cardHeight={274} maxCardWidth textHeight={89} imageHeight={185} />
-        </div>
+    <div className='smallLaptop:py-5 smallLaptop:pl-8 smallLaptop:h-[580px] flex flex-col w-full smallLaptop:w-1/3' >
+        {data?.map((val, index) => <div key={val?._id} className={`${index !== 0 && "smallLaptop:pt-[32px] pt-5"} w-full`} ><MiniCard home isSuccess={isSuccess} data={val} /></div>)}
     </div>
   )
 }
